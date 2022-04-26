@@ -1,6 +1,6 @@
 import React from "react"
 
-const ControlPresupuesto = ({presupuesto}) => {
+const ControlPresupuesto = ({ presupuesto }) => {
 
     //Formatear valor a la moneda local
     const formatearCantidad = (cantidad) => {

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Modal from './components/Modal';
+import { generarId } from './helpers';
 import IconoNuevoGasto from './img/nuevo-gasto.svg'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false)
   const [modal, setModal] = useState(false) //Ventana modal iniciada en false
   const [animarModal, setAnimarModal] = useState(false) //Definir tiempo de animación del modal
+  const [gastos, setGastos] = useState([])
 
   //Si el onCLick es ejecutado mostramos el modal
   const handleNuevoGasto = () => {
@@ -17,6 +19,19 @@ function App() {
     //Tiempo de apertura del modal
     setTimeout(() => {
       setAnimarModal(true)
+    }, 300);
+  }
+
+  const guardarGasto = gasto => {
+    //Generamos un id random para gasto
+    gasto.id = generarId();
+    //Generamos copia de gastos
+    setGastos([...gastos, gasto])
+
+    //Cerramos modal despues de guardar los datos
+    setAnimarModal(false)
+    setTimeout(() => {
+      setModal(false)
     }, 300);
   }
 
@@ -45,6 +60,7 @@ function App() {
           setModal={setModal} //recibimos el setModal en false desde CerraBtn
           animarModal={animarModal}
           setAnimarModal={setAnimarModal}
+          guardarGasto={guardarGasto}
         />}
 
     </div>
