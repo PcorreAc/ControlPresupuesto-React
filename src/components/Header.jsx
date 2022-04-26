@@ -1,5 +1,6 @@
 import React from 'react'
 import NuevoPresupuesto from './NuevoPresupuesto'
+import ControlPresupuesto from './ControlPresupuesto'
 
 const Header = ({
     //Obtenemos variables enviadas desde App.jsx
@@ -14,7 +15,9 @@ const Header = ({
 
             {/* Preguntamos si presupuesto es válido */}
             {isValidPresupuesto ? (
-                <p>Control Presupuesto</p>
+                <ControlPresupuesto
+                presupuesto={presupuesto}
+                />
             ): (//Si no es válido cargamos formulario 
                 <NuevoPresupuesto
                 //Pasando variables al NuevoPresupuesto

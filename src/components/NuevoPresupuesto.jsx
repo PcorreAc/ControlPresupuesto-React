@@ -32,7 +32,7 @@ const NuevoPresupuesto = ({
                      type='number' 
                      placeholder='Añade tu Presupuesto' 
                      value={presupuesto}//Pasando valor inicial (0)
-                     onChange={ e => setPresupuesto(Number(e.target.value))}//Capturando valor ingresado por pantalla y lo convertimos a IntS
+                     onChange={ e => setPresupuesto(Number(e.target.value))}//Capturando valor ingresado por pantalla y lo convertimos a Int
                      />
                 </div>
                 <input type="submit" id="Añadir" />
