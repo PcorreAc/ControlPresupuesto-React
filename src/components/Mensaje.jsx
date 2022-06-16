@@ -1,12 +1,8 @@
-import React from "react"
+import React from "react";
 //tipo => tipo de error
 //children => mensaje
-const Mensaje = ({children, tipo}) => {
-    return (
-        <div className={`alerta ${tipo}`}>{children}
+const Mensaje = ({ children, tipo }) => {
+  return <div className={`alerta ${tipo}`}>{children}</div>;
+};
 
-        </div>
-    )
-}
-
-export default Mensaje
+export default Mensaje;
