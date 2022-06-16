@@ -16,6 +16,7 @@ const Modal = ({
   const [categoria, setCategoria] = useState("");
   const [fecha, setFecha] = useState("");
   const [id, setId] = useState("");
+  const [isBtnDisable, setIsBtnDisable] = useState(false);
 
   useEffect(() => {
     if (Object.keys(gastoEditar).length > 0) {
@@ -38,6 +39,7 @@ const Modal = ({
 
   //Generamos validaciones para los valores del form
   const handleSubmit = (e) => {
+    setIsBtnDisable(true);
     e.preventDefault();
 
     //Preguntamos si los valores estan vacíos y generamos la acción
@@ -115,6 +117,7 @@ const Modal = ({
         </div>
         <input
           type="submit"
+          disabled={isBtnDisable}
           value={gastoEditar.nombre ? "Guardar Cambios" : "Añadir Gasto"}
         />
       </form>
