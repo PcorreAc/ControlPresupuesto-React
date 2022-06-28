@@ -5,6 +5,7 @@ import ControlPresupuesto from "./ControlPresupuesto";
 const Header = ({
   //Obtenemos variables enviadas desde App.jsx
   gastos,
+  setGastos,
   presupuesto,
   setPresupuesto,
   isValidPresupuesto,
@@ -16,7 +17,13 @@ const Header = ({
 
       {/* Preguntamos si presupuesto es válido */}
       {isValidPresupuesto ? (
-        <ControlPresupuesto gastos={gastos} presupuesto={presupuesto} />
+        <ControlPresupuesto
+          gastos={gastos}
+          setGastos={setGastos}
+          presupuesto={presupuesto}
+          setPresupuesto={setPresupuesto}
+          setIsValidPresupuesto={setIsValidPresupuesto}
+        />
       ) : (
         //Si no es válido cargamos formulario
         <NuevoPresupuesto

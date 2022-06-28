@@ -97,6 +97,7 @@ header h1 {
     border: none;
     flex: 1;
     font-size: 1.6rem;
+    width: 100%;
 }
 .formulario input[type="submit"] {
     background-color: #1048a4;
@@ -115,6 +116,9 @@ header h1 {
     .formulario input[type="submit"] {
         display: block;
         padding: 1rem 5rem;
+    }
+    .formulario input[type="number"] {
+       
     }
 }
 .formulario input[type="submit"]:hover {
@@ -144,8 +148,6 @@ header h1 {
     background-color: var(--blanco);
     border-left: 5px solid #b91c1c;
     color: #b91c1c;
-}
-.alerta.success {
 }
 
 .contenedor {
@@ -207,7 +209,7 @@ header h1 {
 }
 .contenido-presupuesto p.negativo,
 .contenido-presupuesto p.negativo span {
-    color: red;
+    color: #DC2626;
 }
 .contenido-presupuesto span {
     font-weight: 900;
