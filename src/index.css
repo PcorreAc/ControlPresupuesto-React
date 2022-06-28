@@ -117,9 +117,6 @@ header h1 {
         display: block;
         padding: 1rem 5rem;
     }
-    .formulario input[type="number"] {
-       
-    }
 }
 .formulario input[type="submit"]:hover {
     background-color: #042a67;
